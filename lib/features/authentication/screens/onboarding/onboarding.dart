@@ -1,5 +1,6 @@
 import 'package:e_commerce/features/authentication/controllers/onboarding_controller.dart';
 import 'package:e_commerce/features/authentication/screens/login/login.dart';
+import 'package:e_commerce/features/authentication/screens/signup/signup.dart';
 import 'package:e_commerce/utils/constants/colors.dart';
 import 'package:e_commerce/utils/constants/image_strings.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
@@ -23,7 +24,7 @@ class OnBoardingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(OnBoardingController());
 
-    return Scaffold(body: LoginScreen()
+    return const Scaffold(body: SignupScreen()
         // Stack(
         //   children: [
         //     /// Horizontal Scrollable Page
