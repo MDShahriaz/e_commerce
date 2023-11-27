@@ -5,19 +5,20 @@ import 'package:e_commerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
 class TLoginHeader extends StatelessWidget {
+  final bool dark;
   const TLoginHeader({
     super.key,
+    required this.dark,
   });
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Image(
           height: 150,
-          image: AssetImage(dark ? TImages.lightAppLogo : TImages.darkAppLogo),
+          image: AssetImage(dark ? TImages.darkAppLogo : TImages.lightAppLogo),
         ),
         Text(
           TTexts.loginTitle,
