@@ -39,7 +39,7 @@ class TDeviceUtils {
     return MediaQuery.of(Get.context!).size.height;
   }
 
-  static double getScreenWidth(BuildContext context) {
+  static double getScreenWidth() {
     return MediaQuery.of(Get.context!).size.width;
   }
 
@@ -102,18 +102,18 @@ class TDeviceUtils {
     }
   }
 
-  static bool isIOS(){
+  static bool isIOS() {
     return Platform.isIOS;
   }
 
-  static bool isAndroid(){
+  static bool isAndroid() {
     return Platform.isAndroid;
   }
 
-  static void launchUrl(String url) async{
-    if(await canLaunchUrlString(url)){
+  static void launchUrl(String url) async {
+    if (await canLaunchUrlString(url)) {
       await launchUrlString(url);
-    }else{
+    } else {
       throw 'Could not launch $url';
     }
   }
