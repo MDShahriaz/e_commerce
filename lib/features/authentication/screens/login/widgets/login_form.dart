@@ -1,4 +1,5 @@
 import 'package:e_commerce/features/authentication/controllers/login_controller.dart';
+import 'package:e_commerce/features/authentication/screens/signup/signup.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
 import 'package:e_commerce/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
@@ -80,7 +81,7 @@ class TLoginForm extends StatelessWidget {
               width: double.infinity,
               child: OutlinedButton(
                 onPressed: () {
-                  controller.nextPage();
+                  Get.to(() => const SignupScreen());
                 },
                 child: const Text(TTexts.createAccount),
               ),
