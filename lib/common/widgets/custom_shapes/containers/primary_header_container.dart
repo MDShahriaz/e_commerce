@@ -28,7 +28,7 @@ class TPrimaryHeaderContainer extends StatelessWidget {
                 right: -259,
                 child: TCircularContainer(
                   backgroundColor: TColors.textWhite.withOpacity(0.1),
-                  width: TDeviceUtils.getScreenWidth(),
+                  width: TDeviceUtils.getScreenWidth(context),
                   height: TDeviceUtils.getScreenHeight() * 0.525,
                 ),
               ),
@@ -37,7 +37,7 @@ class TPrimaryHeaderContainer extends StatelessWidget {
                 right: -300,
                 child: TCircularContainer(
                   backgroundColor: TColors.textWhite.withOpacity(0.1),
-                  width: TDeviceUtils.getScreenWidth(),
+                  width: TDeviceUtils.getScreenWidth(context),
                   height: TDeviceUtils.getScreenHeight() * 0.525,
                 ),
               ),
