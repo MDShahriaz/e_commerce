@@ -1,5 +1,6 @@
 import 'package:e_commerce/features/shop/screens/home/home.dart';
 import 'package:e_commerce/features/shop/screens/store/store.dart';
+import 'package:e_commerce/features/shop/screens/wishlist/wishlist.dart';
 import 'package:e_commerce/utils/constants/colors.dart';
 import 'package:e_commerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -49,7 +50,7 @@ class NavigationController extends GetxController {
       child: StoreScreen(),
     ),
     Container(
-      color: Colors.orange,
+      child: FavouriteScreen(),
     ),
     Container(
       color: Colors.blue,
