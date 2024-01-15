@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import '../../utils/constants/colors.dart';
 
 class TShadowStyle {
-  static final verticalProductShadow = BoxShadow(
+  static const verticalProductShadow = BoxShadow(
     color: TColors.darkGrey,
     blurRadius: 50,
     spreadRadius: 7,
-    offset: const Offset(0, 2),
+    offset: Offset(0, 2),
   );
 
   static final horizontalProductShadow = BoxShadow(

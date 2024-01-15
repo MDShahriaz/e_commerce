@@ -1,7 +1,6 @@
 import 'package:e_commerce/common/widgets/TBrandCard.dart';
 import 'package:e_commerce/common/widgets/products/rounded_container.dart';
 import 'package:e_commerce/utils/constants/colors.dart';
-import 'package:e_commerce/utils/constants/image_strings.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
 import 'package:e_commerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';

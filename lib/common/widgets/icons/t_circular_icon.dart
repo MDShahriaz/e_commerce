@@ -2,7 +2,6 @@ import 'package:e_commerce/utils/constants/colors.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
 import 'package:e_commerce/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 
 class TCircularIcon extends StatelessWidget {
   const TCircularIcon({
@@ -28,11 +27,9 @@ class TCircularIcon extends StatelessWidget {
       width: width,
       height: height,
       decoration: BoxDecoration(
-        color: backgroundColor != null
-            ? backgroundColor
-            : THelperFunctions.isDarkMode(context)
+        color: backgroundColor ?? (THelperFunctions.isDarkMode(context)
                 ? TColors.black.withOpacity(0.9)
-                : TColors.white.withOpacity(0.9),
+                : TColors.white.withOpacity(0.9)),
         borderRadius: BorderRadius.circular(100),
       ),
       child: IconButton(

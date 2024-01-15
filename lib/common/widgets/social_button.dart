@@ -14,7 +14,7 @@ class TSocialButtons extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          padding: EdgeInsets.all(7),
+          padding: const EdgeInsets.all(7),
           decoration: BoxDecoration(
             border: Border.all(color: TColors.grey),
             borderRadius: BorderRadius.circular(100),
@@ -27,7 +27,7 @@ class TSocialButtons extends StatelessWidget {
         ),
         const SizedBox(width: TSizes.spaceBtwItems),
         Container(
-          padding: EdgeInsets.all(7),
+          padding: const EdgeInsets.all(7),
           decoration: BoxDecoration(
             border: Border.all(color: TColors.grey),
             borderRadius: BorderRadius.circular(100),

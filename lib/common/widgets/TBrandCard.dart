@@ -47,7 +47,7 @@ class TBrandCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  TBrandTitleWithVerifiedIcon(
+                  const TBrandTitleWithVerifiedIcon(
                     title: 'Nike',
                     brandTextSize: TextSizes.large,
                   ),

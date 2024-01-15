@@ -1,13 +1,10 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:e_commerce/common/widgets/layouts/grid_layout.dart';
 import 'package:e_commerce/common/widgets/products/product_cards/TProductCardVertical.dart';
 import 'package:e_commerce/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:e_commerce/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:flutter/material.dart';
-import '../../../../common/widgets/custom_shapes/containers/circular_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
-import '../../../../common/widgets/images/t_rounded_image.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/sizes.dart';
@@ -52,6 +49,9 @@ class HomeScreen extends StatelessWidget {
                         THomeCategories(),
                       ],
                     ),
+                  ),
+                  SizedBox(
+                    height: TSizes.spaceBtwSections,
                   ),
                 ],
               ),

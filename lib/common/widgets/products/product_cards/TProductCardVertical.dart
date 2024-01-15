@@ -41,7 +41,7 @@ class TProductCardVertical extends StatelessWidget {
               backgroundColor: dark ? TColors.dark : TColors.light,
               child: Stack(
                 children: [
-                  TRoundedImage(
+                  const TRoundedImage(
                     imageUrl: TImages.productImage1,
                     applyImageRadius: true,
                   ),
@@ -61,7 +61,7 @@ class TProductCardVertical extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     top: 0,
                     right: 0,
                     child: TCircularIcon(
@@ -79,28 +79,28 @@ class TProductCardVertical extends StatelessWidget {
             ),
 
             /// -- details
-            Padding(
-              padding: const EdgeInsets.only(left: TSizes.sm),
+            const Padding(
+              padding: EdgeInsets.only(left: TSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const TProductTitleText(
+                  TProductTitleText(
                     title: 'Green Nike Air Shoes',
                     smallSize: true,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: TSizes.spaceBtwItems / 2,
                   ),
                   TBrandTitleWithVerifiedIcon(title: 'Nike'),
                 ],
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 /// Price
-                Padding(
+                const Padding(
                   padding: EdgeInsets.only(left: TSizes.sm),
                   child: TProductPriceText(
                     price: '35.5',

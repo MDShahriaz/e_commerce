@@ -20,7 +20,7 @@ class TCategoryTab extends StatelessWidget {
             child: Wrap(
               children: [
                 /// --- brands
-                TBrandShowCase(
+                const TBrandShowCase(
                   images: [
                     TImages.productImage3,
                     TImages.productImage2,
@@ -38,7 +38,7 @@ class TCategoryTab extends StatelessWidget {
                 ),
                 TGridLayout(
                     itemCount: 4,
-                    itemBuilder: (_, index) => TProductCardVertical()),
+                    itemBuilder: (_, index) => const TProductCardVertical()),
                 const SizedBox(
                   height: TSizes.spaceBtwSections,
                 )

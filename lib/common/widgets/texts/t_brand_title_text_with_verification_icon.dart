@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:e_commerce/common/widgets/texts/t_brand_title_text.dart';
 import 'package:e_commerce/utils/constants/colors.dart';
