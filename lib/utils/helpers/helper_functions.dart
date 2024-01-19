@@ -20,6 +20,8 @@ class THelperFunctions {
       return Colors.black;
     } else if (value == 'White') {
       return Colors.white;
+    } else if (value == 'Yellow') {
+      return Colors.yellow;
     }
     return null;
   }
