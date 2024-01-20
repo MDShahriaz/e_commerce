@@ -17,22 +17,25 @@ class TChoiceChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isColor = THelperFunctions.getColor(text);
-    return ChoiceChip(
-      label: isColor != null ? const SizedBox() : Text(text),
-      selected: selected,
-      onSelected: onSelected,
-      labelStyle: TextStyle(color: selected ? TColors.white : null),
-      avatar: isColor != null
-          ? TCircularContainer(
-              width: 50,
-              height: 50,
-              backgroundColor: isColor,
-            )
-          : null,
-      shape: isColor != null ? const CircleBorder() : null,
-      backgroundColor: isColor != null ? isColor : null,
-      labelPadding: isColor != null ? const EdgeInsets.all(0) : null,
-      padding: isColor != null ? const EdgeInsets.all(0) : null,
+    return Theme(
+      data: Theme.of(context).copyWith(canvasColor: Colors.transparent),
+      child: ChoiceChip(
+        label: isColor != null ? const SizedBox() : Text(text),
+        selected: selected,
+        onSelected: onSelected,
+        labelStyle: TextStyle(color: selected ? TColors.white : null),
+        avatar: isColor != null
+            ? TCircularContainer(
+                width: 50,
+                height: 50,
+                backgroundColor: isColor,
+              )
+            : null,
+        shape: isColor != null ? const CircleBorder() : null,
+        backgroundColor: isColor != null ? isColor : null,
+        labelPadding: isColor != null ? const EdgeInsets.all(0) : null,
+        padding: isColor != null ? const EdgeInsets.all(0) : null,
+      ),
     );
   }
 }

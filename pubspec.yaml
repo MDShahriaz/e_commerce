@@ -39,6 +39,8 @@ dependencies:
   flutter_native_splash: ^2.3.2
   smooth_page_indicator: ^1.1.0
   carousel_slider: ^4.2.1
+  readmore: ^2.2.0
+  flutter_rating_bar: ^4.0.1
 
 
   # The following adds the Cupertino Icons font to your application.
