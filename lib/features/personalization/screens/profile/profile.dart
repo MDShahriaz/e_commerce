@@ -34,7 +34,7 @@ class ProfileScreen extends StatelessWidget {
                       height: 80,
                     ),
                     TextButton(
-                        onPressed: () {}, child: Text('Change Profile Picture'))
+                        onPressed: ()=, child: Text('Change Profile Picture'))
                   ],
                 ),
               ),
