@@ -1,8 +1,15 @@
 import 'package:e_commerce/common/widgets/appbar/appbar.dart';
+import 'package:e_commerce/common/widgets/products/ratings/rating_indicator.dart';
+import 'package:e_commerce/features/shop/screens/product_reviews/widgets/rating_progress_indicator.dart';
+import 'package:e_commerce/features/shop/screens/product_reviews/widgets/user_review_card.dart';
 import 'package:e_commerce/utils/constants/colors.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
 import 'package:e_commerce/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:iconsax/iconsax.dart';
+
+import 'widgets/progress_indicator_and_rating.dart';
 
 class TProductReviewsScreen extends StatelessWidget {
   const TProductReviewsScreen({super.key});
@@ -18,47 +25,32 @@ class TProductReviewsScreen extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                   'Ratings and reviews are verified and are from people who use the same type of device that you use'),
               const SizedBox(
                 height: TSizes.spaceBtwItems,
               ),
-              Row(
-                children: [
-                  Text(
-                    '4.8',
-                    style: Theme.of(context).textTheme.displayLarge,
-                  ),
-                  const SizedBox(
-                    width: TSizes.spaceBtwItems / 2,
-                  ),
-                  Expanded(
-                    child: Column(
-                      children: [
-                        Text(
-                          '5',
-                          style: Theme.of(context).textTheme.bodyMedium,
-                        ),
-                        Expanded(
-                          child: SizedBox(
-                            width: TDeviceUtils.getScreenWidth(context) * .5,
-                            child: LinearProgressIndicator(
-                              value: 0.5,
-                              minHeight: 25,
-                              backgroundColor: TColors.grey,
-                              borderRadius: BorderRadius.circular(7),
-                              valueColor:
-                                  AlwaysStoppedAnimation(TColors.primaryColor),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
-              )
+
+              /// Over all product rating
+              TOverallProductRating(),
+              TRatingBarIndicator(rating: 3.5),
+              Text(
+                '12611',
+                style: Theme.of(context).textTheme.bodySmall,
+              ),
+              const SizedBox(
+                height: TSizes.spaceBtwSections,
+              ),
+
+              /// User review list
+              const UserReviewCard(),
+              const UserReviewCard(),
+              const UserReviewCard(),
+              const UserReviewCard(),
+              const UserReviewCard(),
+              const UserReviewCard(),
             ],
           ),
         ),
