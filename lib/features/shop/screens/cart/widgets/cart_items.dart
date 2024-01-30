@@ -18,7 +18,7 @@ class TCartItems extends StatelessWidget {
       separatorBuilder: (_, __) => SizedBox(
         height: TSizes.spaceBtwSections,
       ),
-      itemCount: 14,
+      itemCount: 2,
       itemBuilder: (_, index) => Column(
         children: [
           TCartItem(),

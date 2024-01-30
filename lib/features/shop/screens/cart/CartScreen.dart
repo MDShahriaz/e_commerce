@@ -7,6 +7,7 @@ import 'package:e_commerce/common/widgets/texts/product_price_text.dart';
 import 'package:e_commerce/common/widgets/texts/product_title_text.dart';
 import 'package:e_commerce/common/widgets/texts/t_brand_title_text_with_verification_icon.dart';
 import 'package:e_commerce/features/shop/screens/cart/widgets/cart_items.dart';
+import 'package:e_commerce/features/shop/screens/checkout/checkout.dart';
 import 'package:e_commerce/utils/constants/colors.dart';
 import 'package:e_commerce/utils/constants/image_strings.dart';
 import 'package:e_commerce/utils/constants/sizes.dart';
@@ -37,7 +38,7 @@ class CartScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(
             horizontal: TSizes.defaultSpace, vertical: TSizes.spaceBtwItems),
         child: ElevatedButton(
-          onPressed: () {},
+          onPressed: () => Get.to(() => CheckoutScreen()),
           child: Text('Checkout \$256.0'),
         ),
       ),
