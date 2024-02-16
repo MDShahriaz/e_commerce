@@ -62,6 +62,8 @@ class TImages {
       "assets/images/animations/sammy-line-man-receives-a-mail.png";
   static const String verifyIllustration =
       "assets/images/animations/sammy-line-travel-backpack-with-passport-and-air-ticket.gif";
+  static const String verifyEmailAnimation =
+      "assets/images/animations/email-animation.json";
 
   // -- Products
   static const String productImage1 = "assets/images/products/nike-shoes.png";
