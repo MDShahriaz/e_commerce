@@ -28,7 +28,7 @@ class SignupController extends GetxController {
     try {
       // start loading
       TFullScreenLoader.openLoadingDialog(
-          'We are processing your information..', TImages.verifyEmailAnimation);
+          'We are processing your information..', TImages.docerAnimation);
 
       // Check internet Conntectivity
       final isConnected = await NetworkManager.instance.isConnected();
@@ -75,7 +75,9 @@ class SignupController extends GetxController {
       );
 
       // Move to Verify Email Screen
-      Get.to(() => const VerifyEmailScreen());
+      Get.to(() => VerifyEmailScreen(
+            email: email.text.toString(),
+          ));
     } catch (e) {
       TLoaders.errorSnackBar(title: 'Oh snap', message: e.toString());
     } finally {
