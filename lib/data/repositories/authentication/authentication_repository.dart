@@ -106,6 +106,24 @@ class AuthenticationRepository extends GetxController {
     }
   }
 
+  /// [EmailAuthenticaiton] - FORGET PASSWORD
+  Future<void> sendPasswordResetEmail(String email) async {
+    try {
+      await _auth.sendPasswordResetEmail(email: email);
+    } on FirebaseAuthException catch (e) {
+      throw TFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw TFirebaseException(e.code).message;
+    } on FormatException catch (e) {
+      throw const TFormatException();
+    } on PlatformException catch (e) {
+      throw TPlatformException(e.code).message;
+    } catch (e) {
+      if (kDebugMode) print('Something went wrong: $e');
+      return;
+    }
+  }
+
   /// [GoogleAuthentication]
   Future<UserCredential?> signInWithGoogle() async {
     try {
@@ -139,6 +157,7 @@ class AuthenticationRepository extends GetxController {
   /// [LogoutUser] - valid for any authentication
   Future<void> logout() async {
     try {
+      await GoogleSignIn().signOut();
       await FirebaseAuth.instance.signOut();
       Get.offAll(() => const LoginScreen());
     } on FirebaseAuthException catch (e) {
