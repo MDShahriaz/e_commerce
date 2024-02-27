@@ -1,3 +1,5 @@
+import 'package:e_commerce/common/widgets/loaders/shimmer.dart';
+import 'package:e_commerce/features/personalization/controllers/user_controller.dart';
 import 'package:e_commerce/features/shop/screens/cart/CartScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -14,6 +16,7 @@ class THomeAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(UserController());
     return TAppBar(
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -25,12 +28,23 @@ class THomeAppBar extends StatelessWidget {
                 .labelMedium!
                 .apply(color: TColors.grey),
           ),
-          Text(
-            TTexts.homeAppbarSubTitle,
-            style: Theme.of(context)
-                .textTheme
-                .headlineSmall!
-                .apply(color: TColors.white),
+          Obx(
+            () {
+              if (controller.profileLoading.value) {
+                return const TShimmerEffect(
+                  width: 80,
+                  height: 15,
+                );
+              } else {
+                return Text(
+                  controller.user.value.fullName,
+                  style: Theme.of(context)
+                      .textTheme
+                      .headlineSmall!
+                      .apply(color: TColors.white),
+                );
+              }
+            },
           ),
         ],
       ),
