@@ -2,7 +2,7 @@ import 'package:e_commerce/common/widgets/appbar/appbar.dart';
 import 'package:e_commerce/common/widgets/images/t_circular_image.dart';
 import 'package:e_commerce/common/widgets/texts/section_heading.dart';
 import 'package:e_commerce/features/personalization/controllers/user_controller.dart';
-import 'package:e_commerce/features/personalization/screens/change_name/change_name.dart';
+import 'package:e_commerce/features/personalization/screens/profile/widgets/change_name.dart';
 import 'package:e_commerce/features/personalization/screens/profile/widgets/profile_menu.dart';
 import 'package:e_commerce/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:e_commerce/utils/constants/image_strings.dart';
@@ -112,7 +112,9 @@ class ProfileScreen extends StatelessWidget {
               ),
               Center(
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    controller.deleteAccountWarningPopup();
+                  },
                   child: const Text(
                     'Close Account',
                     style: TextStyle(color: Colors.red),
